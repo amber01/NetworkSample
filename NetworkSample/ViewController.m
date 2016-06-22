@@ -86,7 +86,7 @@ static void *ProgressObserverContext = &ProgressObserverContext;
         case 3:
         {
             [self hudTipWillShow:YES];
-            [CKHttpCommunicate createDownloadFileWithURLString:@"http://mirrors.ustc.edu.cn/eclipse/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-macosx-cocoa-x86_64.tar.gz" downloadFileProgress:^(NSProgress *downloadProgress) {
+            [CKHttpCommunicate createDownloadFileWithURLString:@"https://codeload.github.com/Ahmed-Ali/JSONExport/zip/master" downloadFileProgress:^(NSProgress *downloadProgress) {
                 
                 if (self.HUD) {
                     
@@ -99,9 +99,13 @@ static void *ProgressObserverContext = &ProgressObserverContext;
             } setupFilePath:^NSURL *(NSURLResponse *response) {
                 
                 NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+                
                 return [downloadURL URLByAppendingPathComponent:[response suggestedFilename]];
                 
             } downloadCompletionHandler:^(NSURL *filePath, NSError *error) {
+                
+                [[[UIAlertView alloc]initWithTitle:@"下载路径" message: [NSString stringWithFormat:@"%@",filePath] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]show];
+                
                 [self hudTipWillShow:NO];
             }];
             
@@ -112,40 +116,13 @@ static void *ProgressObserverContext = &ProgressObserverContext;
     }
 }
 
-
-
-- (void)uploadImage
-{
-    [self hudTipWillShow:YES];
-    [CKHttpCommunicate createDownloadFileWithURLString:@"https://codeload.github.com/Ahmed-Ali/JSONExport/zip/master" downloadFileProgress:^(NSProgress *downloadProgress) {
-        
-        if (self.HUD) {
-            
-            self.HUD.progress = downloadProgress.fractionCompleted;
-            
-            _HUD.labelText = [NSString stringWithFormat:@"%2.f%%",downloadProgress.fractionCompleted*100];
-            
-        }
-        
-    } setupFilePath:^NSURL *(NSURLResponse *response) {
-        
-        NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-        return [downloadURL URLByAppendingPathComponent:[response suggestedFilename]];
-        
-    } downloadCompletionHandler:^(NSURL *filePath, NSError *error) {
-        [self hudTipWillShow:NO];
-    }];
-    
-    
-}
-
-/*上传图片*/
+/*upload images*/
 - (void)updateImageToServer:(NSData *)data
 {
     
     NSMutableDictionary *Exparams = [[NSMutableDictionary alloc]init];
     
-    [Exparams addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:data,@"portrait", nil]];
+    [Exparams addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:data,@"imageName", nil]];
     
     
     [self hudTipWillShow:YES];
@@ -197,6 +174,7 @@ static void *ProgressObserverContext = &ProgressObserverContext;
     }
 }
 
+#pragma mark -- init MBProgressHUD
 - (void)hudTipWillShow:(BOOL)willShow{
     if (willShow) {
         [self resignFirstResponder];
@@ -204,10 +182,10 @@ static void *ProgressObserverContext = &ProgressObserverContext;
         if (!_HUD) {
             _HUD = [MBProgressHUD showHUDAddedTo:keyWindow animated:YES];
             _HUD.mode = MBProgressHUDModeDeterminateHorizontalBar;
-            _HUD.labelText = @"0%";
             _HUD.removeFromSuperViewOnHide = YES;
         }else{
             _HUD.progress = 0;
+            _HUD.labelText = @"0%";
             [keyWindow addSubview:_HUD];
             [_HUD show:YES];
         }
@@ -216,12 +194,10 @@ static void *ProgressObserverContext = &ProgressObserverContext;
     }
 }
 
-#pragma UIImagePickerController Delegate
+#pragma mark -- UIImagePickerController Delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [picker dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [picker dismissViewControllerAnimated:YES completion:nil];
     
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     
