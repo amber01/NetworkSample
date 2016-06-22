@@ -91,6 +91,7 @@ NSDictionary *parameter = @{@"type":@"top",
             } showHUD:self.view];
 ### 文件处理
 #### 上传文件
+```objc
 /*upload images*/
 - (void)updateImageToServer:(NSData *)data
 {
@@ -118,6 +119,7 @@ NSDictionary *parameter = @{@"type":@"top",
         
     }];
 }
+```
 #### 下载文件
 [self hudTipWillShow:YES];
             [CKHttpCommunicate createDownloadFileWithURLString:@"https://codeload.github.com/Ahmed-Ali/JSONExport/zip/master" downloadFileProgress:^(NSProgress *downloadProgress) {
