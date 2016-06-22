@@ -4,7 +4,8 @@
 
 ## Overview
 
-**Network**, 根据AFNetworking3.0框架封装的，实现了GET、POST、PUT、DELETE、上传文件、下载文件、文件上传下载进度条等功能。
+**Network**, 根据AFNetworking3.0框架封装的，实现了GET、POST、PUT、DELETE、上传文件、下载文件、文件上传下载进度条等功能，同时支持IPv6。
+
 ![Mou icon](http://ww1.sinaimg.cn/mw690/63f96e20gw1f53wqayn2gg208u0g9nij.gif)
 
 #### 为什么使用它？
@@ -12,6 +13,8 @@
 2. 只需要设置一个参数就能在界面上显示一个loading状态
 3. block回调代码可读性更高
 4. 快速上传下载文件，同时显示下载或上传进度条
+5. 服务器请求接口单独用一个宏定义来管理，方便查找和代码的阅读，提高开发效率
+6. 支持IPv6
 
 #### 公共方法
 ```objc
