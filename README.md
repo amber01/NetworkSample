@@ -14,6 +14,7 @@
 4. 快速上传下载文件，同时显示下载或上传进度条
 
 #### 公共方法
+```objc
 /**
  *  HTTP请求
  *
@@ -32,7 +33,8 @@
               failure:(void(^)(NSError *erro))failure
               showHUD:(UIView *)showView;
 
-
+```
+```objc
 /**
  *  上传文件功能，如图片等
  *
@@ -51,7 +53,8 @@
               success:(void (^)(id result))success
               uploadFileProgress:(void(^)(NSProgress *uploadProgress))uploadFileProgress
               failure:(void (^)(NSError* erro))failure;
-
+```
+```objc
 /**
  *  下载文件功能
  *
@@ -64,9 +67,11 @@
              downloadFileProgress:(void(^)(NSProgress *downloadProgress))downloadFileProgress
                     setupFilePath:(NSURL*(^)(NSURLResponse *response))setupFilePath
         downloadCompletionHandler:(void (^)(NSURL *filePath, NSError *error))downloadCompletionHandler;
-
+```
 ### 请求方式
 #### GET请求
+
+```objc
 NSDictionary *parameter = @{@"type":@"top",
                                         @"key":@"3a7bda4e7369437ce9450026789a29c3"};
             [CKHttpCommunicate createRequest:HTTP_NEWS_TOP WithParam:parameter withMethod:GET success:^(id result) {
@@ -77,8 +82,10 @@ NSDictionary *parameter = @{@"type":@"top",
             } failure:^(NSError *erro) {
                 
             } showHUD:self.view];
-
+```
 #### POST请求
+
+```objc
 NSDictionary *parameter = @{@"type":@"top",
                                         @"key":@"3a7bda4e7369437ce9450026789a29c3"};
             [CKHttpCommunicate createRequest:HTTP_NEWS_TOP WithParam:parameter withMethod:POST success:^(id result) {
@@ -89,6 +96,8 @@ NSDictionary *parameter = @{@"type":@"top",
             } failure:^(NSError *erro) {
                 
             } showHUD:self.view];
+```
+
 ### 文件处理
 #### 上传文件
 ```objc
@@ -121,6 +130,8 @@ NSDictionary *parameter = @{@"type":@"top",
 }
 ```
 #### 下载文件
+
+```objc
 [self hudTipWillShow:YES];
             [CKHttpCommunicate createDownloadFileWithURLString:@"https://codeload.github.com/Ahmed-Ali/JSONExport/zip/master" downloadFileProgress:^(NSProgress *downloadProgress) {
                 
@@ -147,5 +158,5 @@ NSDictionary *parameter = @{@"type":@"top",
             
         }
 
-
+```
 
