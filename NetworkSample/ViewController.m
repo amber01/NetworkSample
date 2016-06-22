@@ -182,6 +182,8 @@ static void *ProgressObserverContext = &ProgressObserverContext;
         if (!_HUD) {
             _HUD = [MBProgressHUD showHUDAddedTo:keyWindow animated:YES];
             _HUD.mode = MBProgressHUDModeDeterminateHorizontalBar;
+            _HUD.progress = 0;
+            _HUD.labelText = @"0%";
             _HUD.removeFromSuperViewOnHide = YES;
         }else{
             _HUD.progress = 0;
