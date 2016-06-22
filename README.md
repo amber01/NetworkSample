@@ -6,8 +6,6 @@
 
 **Network**, 根据AFNetworking3.0框架封装的，实现了GET、POST、PUT、DELETE、上传文件、下载文件、文件上传下载进度条等功能，同时支持IPv6。
 
-![Mou icon](http://ww1.sinaimg.cn/mw690/63f96e20gw1f53wqayn2gg208u0g9nij.gif)
-
 #### 为什么使用它？
 1. 简单快捷，只需要一句代码即可请求网络和文件处理
 2. 只需要设置一个参数就能在界面上显示一个loading状态
@@ -163,3 +161,11 @@ NSDictionary *parameter = @{@"type":@"top",
 
 ```
 
+### 其他
+#### 联系方式
+QQ   :491884687
+Email:shlidty@163.com
+
+#### 截图概述
+
+![Mou icon](http://ww1.sinaimg.cn/mw690/63f96e20gw1f53wqayn2gg208u0g9nij.gif)
