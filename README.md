@@ -163,8 +163,8 @@ NSDictionary *parameter = @{@"type":@"top",
 
 ### 其他
 #### 联系方式
-QQ   :491884687
-Email:shlidty@163.com
+QQ   : 491884687  
+email: shlidty@163.com
 
 #### 截图概述
 
