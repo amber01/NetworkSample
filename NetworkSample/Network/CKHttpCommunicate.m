@@ -184,7 +184,12 @@
 {
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-       /******************************************************************/
+    
+    /******************************************************************/
+    
+    NSString * url = [NSString stringWithUTF8String:cHttpMethod[taskID]];
+    NSString *URLString = [NSString stringWithFormat:@"%@%@",URL_BASE,url];
+    
     /**
      *  将cookie通过请求头的形式传到服务器，比较是否和服务器一致
      */
@@ -209,7 +214,7 @@
     }
     
     /******************************************************************/
-    NSMutableURLRequest *request = [_HTTPManager.requestSerializer multipartFormRequestWithMethod:[self getStringForRequestType:method] URLString:URL_BASE parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    NSMutableURLRequest *request = [_HTTPManager.requestSerializer multipartFormRequestWithMethod:[self getStringForRequestType:method] URLString:URLString parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         //图片上传
         if (Exparam) {
             for (NSString *key in [Exparam allKeys]) {
