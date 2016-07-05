@@ -1,10 +1,10 @@
-# NetworkSample
+# WSNetworking
 
 
 
 ## Overview
 
-**Network**, 根据AFNetworking3.0框架封装的，实现了GET、POST、PUT、DELETE、上传文件、下载文件、文件上传下载进度条等功能，同时支持IPv6。
+**WSNetworking**, 根据AFNetworking3.0框架封装的，实现了GET、POST、PUT、DELETE、上传文件、下载文件、文件上传下载进度条等功能，同时支持IPv6。
 
 #### 为什么使用它？
 1. 简单快捷，只需要一句代码即可请求网络和文件处理
