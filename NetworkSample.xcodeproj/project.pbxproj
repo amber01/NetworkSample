@@ -132,7 +132,7 @@
 		DBD362E51D19393200947A67 /* NetworkSample */ = {
 			isa = PBXGroup;
 			children = (
-				DBD363191D19396C00947A67 /* Network */,
+				DBD363191D19396C00947A67 /* WSNetworking */,
 				DBD362E91D19393200947A67 /* AppDelegate.h */,
 				DBD362EA1D19393200947A67 /* AppDelegate.m */,
 				DBD362EC1D19393200947A67 /* ViewController.h */,
@@ -172,7 +172,7 @@
 			path = NetworkSampleUITests;
 			sourceTree = "<group>";
 		};
-		DBD363191D19396C00947A67 /* Network */ = {
+		DBD363191D19396C00947A67 /* WSNetworking */ = {
 			isa = PBXGroup;
 			children = (
 				DBD363211D193FE300947A67 /* Tools */,
@@ -180,6 +180,7 @@
 				DBD3631B1D19396C00947A67 /* CKHttpCommunicate.m */,
 				DBD3631C1D19396C00947A67 /* HttpCommunicateDefine.h */,
 			);
+			name = WSNetworking;
 			path = Network;
 			sourceTree = "<group>";
 		};
