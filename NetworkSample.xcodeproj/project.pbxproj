@@ -16,8 +16,8 @@
 		DBD362F61D19393200947A67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD362F41D19393200947A67 /* LaunchScreen.storyboard */; };
 		DBD363011D19393200947A67 /* NetworkSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD363001D19393200947A67 /* NetworkSampleTests.m */; };
 		DBD3630C1D19393200947A67 /* NetworkSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3630B1D19393200947A67 /* NetworkSampleUITests.m */; };
-		DBD3631D1D19396C00947A67 /* CKHttpCommunicate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3631B1D19396C00947A67 /* CKHttpCommunicate.m */; };
-		DBD363241D193FE300947A67 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD363231D193FE300947A67 /* MBProgressHUD+Add.m */; };
+		DBE226681D2B40C30062327E /* CKHttpCommunicate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE226631D2B40C30062327E /* CKHttpCommunicate.m */; };
+		DBE226691D2B40C30062327E /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE226671D2B40C30062327E /* MBProgressHUD+Add.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +57,11 @@
 		DBD363071D19393200947A67 /* NetworkSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD3630B1D19393200947A67 /* NetworkSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkSampleUITests.m; sourceTree = "<group>"; };
 		DBD3630D1D19393200947A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBD3631A1D19396C00947A67 /* CKHttpCommunicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHttpCommunicate.h; sourceTree = "<group>"; };
-		DBD3631B1D19396C00947A67 /* CKHttpCommunicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHttpCommunicate.m; sourceTree = "<group>"; };
-		DBD3631C1D19396C00947A67 /* HttpCommunicateDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpCommunicateDefine.h; sourceTree = "<group>"; };
-		DBD363221D193FE300947A67 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
-		DBD363231D193FE300947A67 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		DBE226621D2B40C30062327E /* CKHttpCommunicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHttpCommunicate.h; sourceTree = "<group>"; };
+		DBE226631D2B40C30062327E /* CKHttpCommunicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHttpCommunicate.m; sourceTree = "<group>"; };
+		DBE226641D2B40C30062327E /* HttpCommunicateDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpCommunicateDefine.h; sourceTree = "<group>"; };
+		DBE226661D2B40C30062327E /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		DBE226671D2B40C30062327E /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 		DBD362E51D19393200947A67 /* NetworkSample */ = {
 			isa = PBXGroup;
 			children = (
-				DBD363191D19396C00947A67 /* WSNetworking */,
+				DBE226611D2B40C30062327E /* WSNetworking */,
 				DBD362E91D19393200947A67 /* AppDelegate.h */,
 				DBD362EA1D19393200947A67 /* AppDelegate.m */,
 				DBD362EC1D19393200947A67 /* ViewController.h */,
@@ -172,23 +172,22 @@
 			path = NetworkSampleUITests;
 			sourceTree = "<group>";
 		};
-		DBD363191D19396C00947A67 /* WSNetworking */ = {
+		DBE226611D2B40C30062327E /* WSNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				DBD363211D193FE300947A67 /* Tools */,
-				DBD3631A1D19396C00947A67 /* CKHttpCommunicate.h */,
-				DBD3631B1D19396C00947A67 /* CKHttpCommunicate.m */,
-				DBD3631C1D19396C00947A67 /* HttpCommunicateDefine.h */,
+				DBE226621D2B40C30062327E /* CKHttpCommunicate.h */,
+				DBE226631D2B40C30062327E /* CKHttpCommunicate.m */,
+				DBE226641D2B40C30062327E /* HttpCommunicateDefine.h */,
+				DBE226651D2B40C30062327E /* Tools */,
 			);
-			name = WSNetworking;
-			path = Network;
+			path = WSNetworking;
 			sourceTree = "<group>";
 		};
-		DBD363211D193FE300947A67 /* Tools */ = {
+		DBE226651D2B40C30062327E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				DBD363221D193FE300947A67 /* MBProgressHUD+Add.h */,
-				DBD363231D193FE300947A67 /* MBProgressHUD+Add.m */,
+				DBE226661D2B40C30062327E /* MBProgressHUD+Add.h */,
+				DBE226671D2B40C30062327E /* MBProgressHUD+Add.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -359,8 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD362EE1D19393200947A67 /* ViewController.m in Sources */,
-				DBD3631D1D19396C00947A67 /* CKHttpCommunicate.m in Sources */,
-				DBD363241D193FE300947A67 /* MBProgressHUD+Add.m in Sources */,
+				DBE226681D2B40C30062327E /* CKHttpCommunicate.m in Sources */,
+				DBE226691D2B40C30062327E /* MBProgressHUD+Add.m in Sources */,
 				DBD362EB1D19393200947A67 /* AppDelegate.m in Sources */,
 				DBD362E81D19393200947A67 /* main.m in Sources */,
 			);
